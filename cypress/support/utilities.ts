@@ -10,4 +10,8 @@ const assertClass = (selector: string, className: string) => {
   cy.get(selector).should("have.class", className);
 };
 
-export { assertTextExact, assertText, assertClass };
+const assertTestId = (testId: string) => {
+  cy.get(`[data-testid="${testId}"]`).should("exist");
+};
+
+export { assertTextExact, assertText, assertClass, assertTestId };

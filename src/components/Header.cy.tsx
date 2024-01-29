@@ -1,5 +1,5 @@
 import Header from "./Header";
-import { assertText, assertClass } from "../../cypress/support/utilities";
+import { assertText, assertClass, assertTestId } from "../../cypress/support/utilities";
 
 describe("<Header />", () => {
   it("renders", () => {
@@ -9,5 +9,6 @@ describe("<Header />", () => {
     assertText("header", "Sign In");
     assertClass("svg", "fa-cart-shopping");
     assertClass("svg", "fa-user");
+    assertTestId("logo");
   });
 });
