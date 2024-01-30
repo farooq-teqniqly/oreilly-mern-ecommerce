@@ -5,6 +5,7 @@ import {
   assertText,
   assertArrayLength,
   getBySelector,
+  assertTestId,
 } from "../../cypress/support/utilities";
 
 const products: Product[] = [
@@ -39,5 +40,15 @@ describe("ProductList", () => {
 
     const firstChild = getByTestId("product-list").children().first();
     assertText(firstChild, "Airpods Wireless Bluetooth Headphones");
+
+    const productImages = getByTestId("product-image");
+    assertArrayLength(productImages, 1);
+  });
+
+  it("does not render products when there are none", () => {
+    cy.mount(<ProductList products={[]} />);
+
+    const children = getByTestId("product-list").children();
+    assertArrayLength(children, 0);
   });
 });
