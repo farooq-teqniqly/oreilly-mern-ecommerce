@@ -41,7 +41,7 @@ describe("ProductList", () => {
     const firstChild = getByTestId("product-list").children().first();
     assertText(firstChild, "Airpods Wireless Bluetooth Headphones");
 
-    const productImages = getByTestId("product-image");
+    const productImages = getBySelector("img");
     assertArrayLength(productImages, 1);
   });
 
