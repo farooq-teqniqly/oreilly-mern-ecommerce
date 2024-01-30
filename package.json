@@ -23,8 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "e2e:headless": "cypress run",
-    "e2e:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "start": "npm run format && react-scripts start",
     "build": "react-scripts build",

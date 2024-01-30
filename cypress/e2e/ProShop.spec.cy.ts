@@ -1,10 +1,11 @@
-import { assertTextExact } from "../support/utilities";
+import { assertTextExact, getBySelector } from "../support/utilities";
 
 const localAppUrl = "http://localhost:3000";
 
 describe("ProShop", () => {
   it("should render the home page", () => {
     cy.visit(localAppUrl);
-    assertTextExact("h1", "Welcome to Pro Shop");
+    const h1 = getBySelector("h1");
+    assertTextExact(h1, "Welcome to Pro Shop");
   });
 });

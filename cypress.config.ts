@@ -13,5 +13,5 @@ export default defineConfig({
       bundler: "webpack",
     },
   },
-  watchForFileChanges: true,
+  watchForFileChanges: false,
 });
