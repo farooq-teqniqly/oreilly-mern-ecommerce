@@ -36,11 +36,20 @@ const assertTestId = (testId: string) => {
   getByTestId(testId).should("exist");
 };
 
+const assertAttribute = (
+  chainable: Cypress.Chainable<JQuery<HTMLElement>>,
+  attr: string,
+  expectedValue: string,
+) => {
+  chainable.get(`[${attr}="${expectedValue}"]`).should("exist");
+};
+
 export {
   assertTextExact,
   assertText,
   assertClass,
   assertTestId,
+  assertAttribute,
   getByTestId,
   getBySelector,
   assertArrayLength,

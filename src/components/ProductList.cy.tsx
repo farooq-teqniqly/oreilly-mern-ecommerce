@@ -5,7 +5,6 @@ import {
   assertText,
   assertArrayLength,
   getBySelector,
-  assertTestId,
 } from "../../cypress/support/utilities";
 
 const products: Product[] = [

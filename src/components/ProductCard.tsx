@@ -8,11 +8,11 @@ type Props = {
 const ProductCard = ({ product }: Props) => {
   return (
     <Card className="my-3 p-3 rounded">
-      <a href={`/product/${product._id}`}>
+      <a href={`/product/${product._id}`} data-testid="product-image-link">
         <Card.Img src={product.image} variant="top" />
       </a>
-      <Card.Body>
-        <a href={`/product/${product._id}`}>
+      <Card.Body data-testid="card-body">
+        <a href={`/product/${product._id}`} data-testid="product-name-link">
           <Card.Title as="div">
             <strong>{product.name}</strong>
           </Card.Title>
